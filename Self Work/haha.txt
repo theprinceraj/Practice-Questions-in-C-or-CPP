@@ -1,0 +1,14 @@
+File Handling in C
+It refers to the method of storing data in the C program in the form of an output or the input that might have been generated while running a C program in a data file i.e., a binary file or a text file for future analysis and reference in that program.
+
+Text File
+It contains data in the form of ASCII characters and is generally used for to store a stream of characters. Each line in a text file ends with the new line character. They are generally stored with ‘.txt’ file extension.
+
+Binary Text File
+It contains data in binary form instead of ASCII characters. They are generally stored with ‘.bin’ file extension.
+
+File Pointer
+A file pointer is used to read from or write to file as well as to control its position inside the file.
+
+Q1. WACP to create a file, write in it and close the file.
+Q2. WACP to open a file, read from it and close the file.
