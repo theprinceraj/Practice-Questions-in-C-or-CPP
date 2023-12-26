@@ -2,6 +2,9 @@
 int main() {
   printf("Preceedence Program 1\n");
 
+  int x = 2 * 3 - 48 == 5 / 4 * 6;
+  printf("%d\n", x);
+
   if (2 * 3 - 48 == 5 / 4 * 6)
     printf("YES!");
   else
