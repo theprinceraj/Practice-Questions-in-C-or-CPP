@@ -4,7 +4,7 @@
 int main() {
   FILE *fp;
   char ch;
-  fp = fopen("Hello.txt", "w");
+  fp = fopen("hello.txt", "w");
   printf("Enter data: ");
   while ((ch = getchar()) != EOF) {
     putc(ch, fp);
