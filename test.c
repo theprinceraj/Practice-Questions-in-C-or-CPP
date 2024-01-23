@@ -1,9 +1,7 @@
 #include <stdio.h>
-
 int main() {
 
-    int a = 12;
-    printf("%d", a/4);
-
-    return 0;
+  int n;
+  printf("Enter the value of \"n\": ");
+  scanf("%d", &n);
 }
