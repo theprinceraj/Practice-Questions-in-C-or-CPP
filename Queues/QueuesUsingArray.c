@@ -68,12 +68,12 @@ int main() {
   }
 
   int choice;
-  printf("\nType 1 if you want to dequeue and type 0 if you want to exit: ");
+  printf("\nType 1 if you want to dequeue and 0 if you want to exit: ");
   scanf("%d", &choice);
   switch (choice) {
   case 1: {
     int val = dequeue(&q);
-    printf("\n%d was dequeued from the queue.\n", val);
+    printf("\n%d dequeued.\n", val);
     break;
   }
   case 0:
