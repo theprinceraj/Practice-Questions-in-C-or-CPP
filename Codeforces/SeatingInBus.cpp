@@ -6,14 +6,21 @@ using namespace std;
 */
 
 void seatingInBus(int n, vector<int> seats) {
-    vector<int> seatsOccupied(n);
-    for(int i = 1; i < n - 1; i++) {
-        bool validSeat = find(seatsOccupied.begin(), seatsOccupied.end(), i - 1) != seatsOccupied.end() || find(seatsOccupied.begin(), seatsOccupied.end(), i + 1) != seatsOccupied.end();
-        if(!validSeat) {
+    unordered_map<int, bool> occupied;
+    for(int i = 0; i < n; i++) {
+        int seat = seats[i];
+        if(i == 0) {
+            occupied[seat] = true;
+            continue;
+        }
+        bool prevFilled = occupied[seat - 1];
+        bool nextFilled = occupied[seat + 1];
+        bool search = prevFilled || nextFilled;
+        if(!search) {
             cout << "NO\n";
             return;
         }
-        seatsOccupied[i] = seats[i];
+        occupied[seat] = true;
     }
     cout << "YES\n";
 }
