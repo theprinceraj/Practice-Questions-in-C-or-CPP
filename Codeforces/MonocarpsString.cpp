@@ -3,39 +3,66 @@ using namespace std;
 
 /*
  * Problem Link: https://codeforces.com/contest/2145/problem/C
-*/
 
-//  TO SOLVE
+TEST CASE:
+7
+13
+aaaababbaabab
+12
+bbbbabbaabaa
+13
+aabbaabbbbaab
+11
+abaaabababa
+12
+bbababaabbab
+12
+abbabababbba
+11
+aaabaaaaaba
+OUTPUT:
+3
+2
+1
+3
+2
+2
+9
+*/
+//  sliding window of length = 2 with (a:2, b:0)
+
+int calcNumericValue(string str) {
+    return str == 'a' ? 1 : -1;
+}
 
 void monocarpString(int n, string word) {
-    int num_a = 0, num_b = 0;
+    int val_a = 1, val_b = -1;
+    int offset = 0;
     for(int i = 0; i < n; i++) {
-        if(word[i] == 'a') {
-            ++num_a;
-        }
+        int val = word[i] == 'a' ? val_a : val_b;
+        offset += calcNumericValue(word[i]);
     }
-    num_b = n - num_a;
-    int diff = num_a - num_b;
-    if(diff == 0) {
-        cout << "0" << "\n";
-        return;
-    }
-    if(num_a == 0 || num_b == 0) {
-        cout << "-1" << "\n";
-        return;
+    // checks if string contains all a's or all b's
+    if(n == offset || n == abs(offset)) {
+        cout << 0 << '\n';
     }
 
-    int k = 0;
-    while(num_a != num_b) {
-        if(word[k] == 'a' && num_a > 1) {
-            num_a--;
-        } else if(word[k] == 'b' && num_b > 1) {
-            num_b--;
+    int minSum = 0;
+    for(int k = 0; k < n; k++) {
+        int currSum = 0;
+        int l = 0, r = abs(offset) - 1;
+        while(l <= r) {
+            currSum += word[k + l] == 'a' ? val_a : val_b;
+            l++;
         }
-        k++;
+        minSum = min(currSum, minSum);
     }
+    if(minSum <= 0) {
+        cout << -1 << '\n';
+        return;
+    }
+    cout << minSum << '\n';
 
-    cout << k << "\n";
 }
 
 int main() {
