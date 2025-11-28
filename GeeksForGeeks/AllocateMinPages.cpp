@@ -19,6 +19,7 @@ int findPages(vector<int> &arr, int k) {
     while(start <= end) {
         int mid = start + (end - start) / 2;
 
+        // distribute books
         int count = 1, page = 0;
         for(int j = 0; j <= n - 1; j++) {
             page += arr[j];
@@ -28,6 +29,8 @@ int findPages(vector<int> &arr, int k) {
             }
         }
 
+        // count <= k instead of count = k because agar koi 4 book 3 students mei divide ho sakti
+        // hai toh wo 4 students mei bhi divide ho sakti ha
         if(count <= k) {
             ans = mid;
             end = mid - 1;
