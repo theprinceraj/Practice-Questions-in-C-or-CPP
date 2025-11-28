@@ -5,7 +5,6 @@ using namespace std;
 
 int minTime(vector<int>&arr, int k) {
     int n = arr.size(), ans = -1;
-    if(n < k) return -1;
 
     int minLimit = *max_element(arr.begin(), arr.end());
     int maxLimit = accumulate(arr.begin(), arr.end(), 0);
