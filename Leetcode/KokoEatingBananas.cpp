@@ -11,7 +11,7 @@ int minEatingSpeed(vector<int>& piles, int h) {
     while(start <= end) {
         int mid = start + (end - start) / 2;
 
-        // int count = 0;
+        // int count = 0; // Leads to TLE error
         long long count = 0;
         for(int j : piles) {
             // We calculate the hours using mathematical formula: [pile / speed]
