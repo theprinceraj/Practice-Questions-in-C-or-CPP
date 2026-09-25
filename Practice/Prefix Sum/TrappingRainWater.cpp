@@ -1,5 +1,5 @@
 /*
- * 6. Trapping Rain Water | HARD
+ * 6. Trapping Rain Water | HARD | Lecture 21
  * You are given an array arr of non-negative integers, where each element
  * represents the height of a block and each block has a width of 1. Your task
  * is to compute how much water can be trapped between the blocks after it
