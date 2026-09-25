@@ -24,6 +24,10 @@
  * • 1 ≤ n ≤ 10^5
  * • 0 ≤ arr[i] ≤ 10^4
  */
+
+/*
+ * Time Complexity: O(2n)
+ */
 #include <vector>
 using namespace std;
 
@@ -35,27 +39,67 @@ int canStore(int cIdxVal, int pMax, int sMax) {
 int trapWater(vector<int> &arr) {
   int n = arr.size();
 
-  vector<int> pMax(n); // prefix max array
-  int temp = INT_MIN;
-  for (int i = 0; i < n; i++) {
-    temp = max(temp, arr[i]);
-    pMax[i] = temp;
-  }
+  // vector<int> pMax(n); // prefix max array
+  // int temp = INT_MIN;
+  // for (int i = 0; i < n; i++) {
+  // temp = max(temp, arr[i]);
+  // pMax[i] = temp;
+  // } NOT Required to be done here, can be done within the main loop itself
 
   vector<int> sMax(n); // suffix max array
-  temp = INT_MIN;
+  int temp = INT_MIN;
   for (int i = n - 1; i >= 0; i--) {
     temp = max(temp, arr[i]);
     sMax[i] = temp;
   }
 
-  int netStored = 0;
-  for (int i = 1; i < n - 1; i++) {
-    netStored += canStore(arr[i], pMax[i], sMax[i]);
+  int netStored = 0, pMax = INT_MIN;
+  for (int i = 0; i < n; i++) {
+    // pMax ka calculation can be done within this loop itself since this
+    // loop is already iterating over the array from 0 to n-1
+    pMax = max(pMax, arr[i]);
+    netStored += canStore(arr[i], pMax, sMax[i]);
   }
 
   return netStored;
 }
+
+/*
+ * Time Complexity: O(3n)
+ * Correct and Optimized Solution compared to the one at the bottom
+ */
+// #include <vector>
+// using namespace std;
+//
+// int canStore(int cIdxVal, int pMax, int sMax) {
+//   int ans = min(pMax, sMax) - cIdxVal;
+//   return ans > 0 ? ans : 0;
+// }
+//
+// int trapWater(vector<int> &arr) {
+//   int n = arr.size();
+//
+//   vector<int> pMax(n); // prefix max array
+//   int temp = INT_MIN;
+//   for (int i = 0; i < n; i++) {
+//     temp = max(temp, arr[i]);
+//     pMax[i] = temp;
+//   }
+//
+//   vector<int> sMax(n); // suffix max array
+//   temp = INT_MIN;
+//   for (int i = n - 1; i >= 0; i--) {
+//     temp = max(temp, arr[i]);
+//     sMax[i] = temp;
+//   }
+//
+//   int netStored = 0;
+//   for (int i = 1; i < n - 1; i++) {
+//     netStored += canStore(arr[i], pMax[i], sMax[i]);
+//   }
+//
+//   return netStored;
+// }
 
 /*
  * Solution With TLE Error
