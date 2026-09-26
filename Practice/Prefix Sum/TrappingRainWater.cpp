@@ -27,7 +27,7 @@
 
 /*
  * Time Complexity: O(n)
- * (using single loop)
+ * (using single loop)(simplified)
  */
 #include <vector>
 using namespace std;
@@ -39,23 +39,49 @@ int trapWater(vector<int> &arr) {
 
   while (left <= right) {
     if (arr[left] <= arr[right]) {
-      if (leftMax > arr[left]) {
-        waterStored += leftMax - arr[left];
-      } else {
-        leftMax = arr[left];
-      }
+      leftMax = max(leftMax, arr[left]);
+      waterStored += leftMax - arr[left];
       left++;
     } else {
-      if (rightMax > arr[right]) {
-        waterStored += rightMax - arr[right];
-      } else {
-        rightMax = arr[right];
-      }
+      rightMax = max(rightMax, arr[right]);
+      waterStored += rightMax - arr[right];
       right--;
     }
   }
   return waterStored;
 }
+
+/*
+ * Time Complexity: O(n)
+ * (using single loop)
+ */
+// #include <vector>
+// using namespace std;
+//
+// int trapWater(vector<int> &arr) {
+//   int n = arr.size();
+//   int leftMax = 0, rightMax = 0, left = 0, right = n - 1;
+//   int waterStored = 0;
+//
+//   while (left <= right) {
+//     if (arr[left] <= arr[right]) {
+//       if (leftMax > arr[left]) {
+//         waterStored += leftMax - arr[left];
+//       } else {
+//         leftMax = arr[left];
+//       }
+//       left++;
+//     } else {
+//       if (rightMax > arr[right]) {
+//         waterStored += rightMax - arr[right];
+//       } else {
+//         rightMax = arr[right];
+//       }
+//       right--;
+//     }
+//   }
+//   return waterStored;
+// }
 
 /*
  * Time Complexity: O(2n)
