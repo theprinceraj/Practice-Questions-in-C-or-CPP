@@ -26,46 +26,79 @@
  */
 
 /*
- * Time Complexity: O(2n)
+ * Time Complexity: O(n)
+ * (using single loop)
  */
 #include <vector>
 using namespace std;
 
-int canStore(int cIdxVal, int pMax, int sMax) {
-  int ans = min(pMax, sMax) - cIdxVal;
-  return ans > 0 ? ans : 0;
-}
-
 int trapWater(vector<int> &arr) {
   int n = arr.size();
+  int leftMax = 0, rightMax = 0, left = 0, right = n - 1;
+  int waterStored = 0;
 
-  // vector<int> pMax(n); // prefix max array
-  // int temp = INT_MIN;
-  // for (int i = 0; i < n; i++) {
-  // temp = max(temp, arr[i]);
-  // pMax[i] = temp;
-  // } NOT Required to be done here, can be done within the main loop itself
-
-  vector<int> sMax(n); // suffix max array
-  int temp = INT_MIN;
-  for (int i = n - 1; i >= 0; i--) {
-    temp = max(temp, arr[i]);
-    sMax[i] = temp;
+  while (left <= right) {
+    if (arr[left] <= arr[right]) {
+      if (leftMax > arr[left]) {
+        waterStored += leftMax - arr[left];
+      } else {
+        leftMax = arr[left];
+      }
+      left++;
+    } else {
+      if (rightMax > arr[right]) {
+        waterStored += rightMax - arr[right];
+      } else {
+        rightMax = arr[right];
+      }
+      right--;
+    }
   }
-
-  int netStored = 0, pMax = INT_MIN;
-  for (int i = 0; i < n; i++) {
-    // pMax ka calculation can be done within this loop itself since this
-    // loop is already iterating over the array from 0 to n-1
-    pMax = max(pMax, arr[i]);
-    netStored += canStore(arr[i], pMax, sMax[i]);
-  }
-
-  return netStored;
+  return waterStored;
 }
 
 /*
- * Time Complexity: O(3n)
+ * Time Complexity: O(2n)
+ * (using double loop)
+ */
+// #include <vector>
+// using namespace std;
+//
+// int canStore(int cIdxVal, int pMax, int sMax) {
+//   int ans = min(pMax, sMax) - cIdxVal;
+//   return ans > 0 ? ans : 0;
+// }
+//
+// int trapWater(vector<int> &arr) {
+//   int n = arr.size();
+//
+//   // vector<int> pMax(n); // prefix max array
+//   // int temp = INT_MIN;
+//   // for (int i = 0; i < n; i++) {
+//   // temp = max(temp, arr[i]);
+//   // pMax[i] = temp;
+//   // } NOT Required to be done here, can be done within the main loop itself
+//
+//   vector<int> sMax(n); // suffix max array
+//   int temp = INT_MIN;
+//   for (int i = n - 1; i >= 0; i--) {
+//     temp = max(temp, arr[i]);
+//     sMax[i] = temp;
+//   }
+//
+//   int netStored = 0, pMax = INT_MIN;
+//   for (int i = 0; i < n; i++) {
+//     // pMax ka calculation can be done within this loop itself since this
+//     // loop is already iterating over the array from 0 to n-1
+//     pMax = max(pMax, arr[i]);
+//     netStored += canStore(arr[i], pMax, sMax[i]);
+//   }
+//
+//   return netStored;
+// }
+
+/*
+ * Time Complexity: O(3n), (using three loops)
  * Correct and Optimized Solution compared to the one at the bottom
  */
 // #include <vector>
