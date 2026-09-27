@@ -19,6 +19,11 @@
 #include <vector>
 using namespace std;
 
+/*
+ * HINT: Use 4 pointers to keep track of the boundaries of the matrix and print
+ * the elements in spiral order.
+ */
+
 void printRowStraight(vector<vector<int>> &mat, vector<int> &res, int r, int c1,
                       int c2) {
   while (c1 <= c2) {
@@ -55,7 +60,7 @@ vector<int> spiralOrder(vector<vector<int>> &matrix) {
 
   int r1 = 0, r2 = r - 1, c1 = 0, c2 = c - 1;
 
-  while (r1 >= 0 && r1 <= r2 && c1 >= 0 && c1 <= c2) {
+  while (r1 <= r2 && c1 <= c2) {
     printRowStraight(matrix, res, r1, c1, c2);
     r1++;
     printColStraight(matrix, res, c2, r1, r2);
