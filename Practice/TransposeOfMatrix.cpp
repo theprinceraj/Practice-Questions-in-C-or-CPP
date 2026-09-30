@@ -18,35 +18,38 @@
 
 #include <vector>
 using namespace std;
+
 /*
- * Without using extra matrix to store the transpose
+ * Using an extra matrix to store the transpose
+ * [Generic solution]
  */
 vector<vector<int>> transpose(vector<vector<int>> &mat) {
   int m = mat.size();
   int n = mat[0].size();
+
+  vector<vector<int>> result(n, vector<int>(m));
+
   for (int i = 0; i < m; i++) {
-    for (int j = i + 1; j < n; j++) {
-      swap(mat[i][j], mat[j][i]);
+    for (int j = 0; j < n; j++) {
+      result[j][i] = mat[i][j];
     }
   }
 
-  return mat;
+  return result;
 }
 
 /*
- * Using an extra matrix to store the transpose
+ * Without using extra matrix to store the transpose
+ * [This solution is possible ONLY WHEN the transpose is also a square matrix]
  */
 // vector<vector<int>> transpose(vector<vector<int>> &mat) {
 //   int m = mat.size();
 //   int n = mat[0].size();
-//
-//   vector<vector<int>> result(n, vector<int>(m));
-//
 //   for (int i = 0; i < m; i++) {
-//     for (int j = 0; j < n; j++) {
-//       result[j][i] = mat[i][j];
+//     for (int j = i + 1; j < n; j++) {
+//       swap(mat[i][j], mat[j][i]);
 //     }
 //   }
 //
-//   return result;
+//   return mat;
 // }
