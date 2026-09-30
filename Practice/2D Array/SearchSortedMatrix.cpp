@@ -84,7 +84,7 @@ bool searchMatrix(const vector<vector<int>> &mat, int target) {
 
 /*
  * Approach 3
- * Time Complexity: O(n * m * log(m))
+ * Time Complexity: O(n * log(m))
  */
 // int binarySearch(vector<int> &arr, int target, int size) {
 //   int start = 0, end = size - 1;
