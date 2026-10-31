@@ -60,7 +60,7 @@ public:
       if (word1[i] == word2[rotIdx]) {
         rotated = 1;
       } else {
-        rotated = 0;
+        break;
       }
     }
     if (rotated == 1)
@@ -72,7 +72,7 @@ public:
       if (word1[i] == word2[rotIdx]) {
         rotated = 1;
       } else {
-        rotated = 0;
+        break;
       }
     }
 
