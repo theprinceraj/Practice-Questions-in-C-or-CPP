@@ -44,10 +44,14 @@ public:
 
       carriedSum = currentSum / 10;
 
-      ans.insert(0, to_string(currentSum % 10));
+      // ans.insert(0, to_string(currentSum % 10)); this is very slow
+      // compared to push_back(); better to do reverse string once at end
+      ans.push_back(currentSum % 10 + '0');
 
       end1--, end2--;
     }
+
+    reverse(ans.begin(), ans.end());
 
     return ans;
   }
