@@ -2,15 +2,29 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "type": "process",
+            "label": "Create build directory",
+            "command": "mkdir",
+            "args": [
+                "-p",
+                "${workspaceFolder}/build"
+            ],
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": []
+        },
+        {
             "type": "cppbuild",
             "label": "C/C++: g++ build active file",
+            "dependsOn": "Create build directory",
             "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${workspaceFolder}/build/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${fileDirname}"
