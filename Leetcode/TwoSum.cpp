@@ -1,3 +1,10 @@
+/*
+ * Two Sum | Easy | LeetCode 1
+ * https://leetcode.com/problems/two-sum/
+ * Idea: one pass with a hash map of value -> index, looking up target - nums[i] before inserting nums[i].
+ * Time: O(n) average | Space: O(n)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 

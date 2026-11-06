@@ -1,3 +1,9 @@
+/*
+ * Operator Precedence: Program 2
+ * Idea: - and * / bind tighter than <<, so the shift count is 2 - 16 = -14, a negative shift (undefined behavior in C).
+ * Time: O(1) | Space: O(1)
+ */
+
 #include <stdio.h>
 int main() {
   printf("Preceedence Program 2\n");

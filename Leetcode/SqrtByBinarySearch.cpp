@@ -1,9 +1,12 @@
+/*
+ * Sqrt(x) | Easy | LeetCode 69
+ * https://leetcode.com/problems/sqrtx/
+ * Idea: binary search the largest mid with mid * mid <= x, squaring in long long to avoid overflow.
+ * Time: O(log x) | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://leetcode.com/problems/sqrtx/description/
- */
 
 int mySqrt(int x) {
     int start = 1, end = x, possible_root;

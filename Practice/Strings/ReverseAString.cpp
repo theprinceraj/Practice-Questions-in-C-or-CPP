@@ -1,4 +1,10 @@
 /*
+ * Reverse a String | Easy
+ * Idea: build a new string by appending the characters from last to first.
+ * Time: O(n) | Space: O(n) for the new string
+ */
+
+/*
  *
  * 82. Reverse a String
  EASY

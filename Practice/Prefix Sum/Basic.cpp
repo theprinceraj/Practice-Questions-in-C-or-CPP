@@ -1,8 +1,14 @@
+/*
+ * Prefix Sum Range Queries | GeeksForGeeks
+ * https://www.geeksforgeeks.org/dsa/understanding-prefix-sums#practical-examples-to-solidify-your-understanding
+ * Idea: build a prefix-sum array so each range sum [L, R] is pSum[R] - pSum[L - 1].
+ * Time: O(m + n), m = |arr|, n = number of queries | Space: O(m)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 
 /*
-URL: https://www.geeksforgeeks.org/dsa/understanding-prefix-sums#practical-examples-to-solidify-your-understanding
 Given an array arr[] of integers and a list of queries queries[][], where each query is in the form [L, R], compute the sum of elements from index L to R (both inclusive) for each query.
 
 Examples:

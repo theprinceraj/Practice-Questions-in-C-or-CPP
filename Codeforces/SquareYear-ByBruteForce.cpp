@@ -1,9 +1,12 @@
+/*
+ * Square Year (brute force) | Codeforces 2114A
+ * https://codeforces.com/contest/2114/problem/A
+ * Idea: try every pair (i, j) in 0..99 and check (i + j)^2 == year.
+ * Time: O(1) per test (fixed 100 x 100 grid) | Space: O(1)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://codeforces.com/contest/2114/problem/A
-*/
 
 int processYearParts(string year) {
     vector<int> num(4);

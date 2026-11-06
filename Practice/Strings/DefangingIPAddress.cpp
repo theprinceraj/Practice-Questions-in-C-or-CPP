@@ -1,4 +1,10 @@
 /*
+ * Defanging an IP Address | Easy
+ * Idea: copy the address, replacing each '.' with "[.]".
+ * Time: O(n) | Space: O(1) besides the result string
+ */
+
+/*
  * 300. Defanging an IP Address | EASY | Solved
  Given a valid (IPv4) IP address, return a defanged version of that IP address.
 

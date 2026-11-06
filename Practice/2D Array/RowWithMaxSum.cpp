@@ -1,4 +1,9 @@
 /*
+ * Row with Max Sum | Easy
+ * Idea: stub only, the function body is empty so no solution is written yet.
+ */
+
+/*
  * 315. Row with Max Sum | EASY
  * Given a 2D array matrix of size n × m, return the index of the row with the
  * maximum sum. If multiple rows have the same maximum sum, return the smallest

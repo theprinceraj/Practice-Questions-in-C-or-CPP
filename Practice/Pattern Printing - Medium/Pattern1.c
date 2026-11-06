@@ -1,3 +1,9 @@
+/*
+ * Pattern 1 (Medium set): Right-aligned Descending Number Triangle
+ * Idea: each row prints n - row spaces, then row down to 1.
+ * Time: O(n^2) | Space: O(1)
+ */
+
 #include<stdio.h>  
 int main(){
     int row, col, n;

@@ -1,4 +1,10 @@
 /*
+ * Palindrome String | Easy
+ * Idea: two pointers moving inward, comparing the characters at both ends.
+ * Time: O(n) | Space: O(1)
+ */
+
+/*
  *
  * 79. Palindrome String | EASY | Solved
  You are given a string s. Your task is to determine if the string is a

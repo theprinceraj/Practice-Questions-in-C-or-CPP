@@ -1,9 +1,12 @@
+/*
+ * Find Minimum in Rotated Sorted Array | Medium | LeetCode 153
+ * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+ * Idea: binary search comparing nums[mid] with nums[0]; a smaller value is in the rotated part, so record it and go left.
+ * Time: O(log n) findMin2 (run from main), O(n) findMin1 | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
-*/
 
 // Time Complexity: O(n)
 int findMin1(vector<int>& nums) {

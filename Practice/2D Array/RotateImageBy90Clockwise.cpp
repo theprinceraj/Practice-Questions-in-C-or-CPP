@@ -1,4 +1,10 @@
 /*
+ * Rotate Image | Medium
+ * Idea: transpose in place, then reverse each row.
+ * Time: O(n^2) | Space: O(1)
+ */
+
+/*
  *
  * 54. Rotate Image | MEDIUM
  * You are given an n x n 2D matrix representing an image, rotate the image by

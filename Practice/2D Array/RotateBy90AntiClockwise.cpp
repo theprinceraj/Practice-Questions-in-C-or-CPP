@@ -1,4 +1,10 @@
 /*
+ * Rotate by 90 Degrees Anti-clockwise | Medium
+ * Idea: transpose in place, then flip each column top to bottom.
+ * Time: O(n^2) | Space: O(1)
+ */
+
+/*
  * 56. Rotate by 90 Degree | MEDIUM
  * Given a square matrix mat[][] of size n x n, rotate it by 90 degrees in an
  * anti-clockwise (counterclockwise) direction without using any extra space.

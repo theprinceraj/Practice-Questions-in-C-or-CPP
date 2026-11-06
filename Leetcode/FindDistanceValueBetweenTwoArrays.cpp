@@ -1,4 +1,11 @@
 /*
+ * Find the Distance Value Between Two Arrays | Easy | LeetCode 1385
+ * https://leetcode.com/problems/find-the-distance-value-between-two-arrays/
+ * Idea: brute force, count arr1 elements that have no arr2 element within distance d.
+ * Time: O(n * m), n = |arr1|, m = |arr2| | Space: O(1)
+ */
+
+/*
  * 1385. Find the Distance Value Between Two Arrays | Solved
  Given two integer arrays arr1 and arr2, and the integer d, return the distance
  value between the two arrays. The distance value is defined as the number of
@@ -35,7 +42,6 @@
  Constraints: 1 <= arr1.length, arr2.length <= 500
  -1000 <= arr1[i], arr2[j] <= 1000
  0 <= d <= 100
- Link: https://leetcode.com/problems/find-the-distance-value-between-two-arrays/description/
  */
 #include <vector>
 using namespace std;

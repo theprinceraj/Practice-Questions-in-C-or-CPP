@@ -1,8 +1,12 @@
+/*
+ * Find First and Last Position of Element in Sorted Array | Medium | LeetCode 34
+ * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+ * Idea: two binary searches, one that keeps going left after a hit (first) and one that keeps going right (last).
+ * Time: O(log n) | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-/*
- * Problem Link: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
-*/
 
 vector<int> searchRange(vector<int>& nums, int target) {
     int start = 0, end = nums.size() - 1;

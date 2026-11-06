@@ -1,4 +1,10 @@
 /*
+ * Trapping Rain Water | Hard
+ * Idea: two pointers move inward from the lower side; water at a cell = that side's running max minus its height.
+ * Time: O(n) | Space: O(1)
+ */
+
+/*
  * 6. Trapping Rain Water | HARD | Lecture 21
  * You are given an array arr of non-negative integers, where each element
  * represents the height of a block and each block has a width of 1. Your task

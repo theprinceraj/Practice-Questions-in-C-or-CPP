@@ -1,4 +1,10 @@
 /*
+ * Sort a String | Easy
+ * Idea: counting sort, tally the 26 letters then emit them in order.
+ * Time: O(n) | Space: O(1) besides the result string
+ */
+
+/*
  * 303. Sort a String | EASY
  Given a string s consisting of lowercase letters, arrange all its letters in
  ascending order.

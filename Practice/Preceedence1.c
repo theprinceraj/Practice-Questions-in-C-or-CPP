@@ -1,3 +1,9 @@
+/*
+ * Operator Precedence: Program 1
+ * Idea: arithmetic binds tighter than ==, and 5 / 4 is integer division, so -42 == 6 evaluates to 0.
+ * Time: O(1) | Space: O(1)
+ */
+
 #include <stdio.h>
 int main() {
   printf("Preceedence Program 1\n");

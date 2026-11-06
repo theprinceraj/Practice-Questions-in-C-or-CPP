@@ -1,3 +1,9 @@
+/*
+ * Pattern 5, Approach 3 (Advanced set): Inverted Star Pyramid
+ * Idea: count the blank pairs per row and print (2n - 1) minus twice that many stars.
+ * Time: O(n^2) | Space: O(1)
+ */
+
 #include <stdio.h>
 int main() {
 

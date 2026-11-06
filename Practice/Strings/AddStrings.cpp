@@ -1,10 +1,16 @@
 /*
+ * Add Strings | Easy | LeetCode 415
+ * https://leetcode.com/problems/add-strings/
+ * Idea: add digit by digit from the right with a carry, push_back each digit and reverse once at the end.
+ * Time: O(max(n1, n2)) | Space: O(1) besides the result string
+ */
+
+/*
  * 305. Add Strings | EASY
  Given two non-negative integers, num1 and num2 represented as string, return
  the sum of num1 and num2 as a string. You must solve the problem without using
  any built-in library for handling large integers (such as BigInteger). You must
  also not convert the inputs to integers directly.
- Also on Leetcode at: https://leetcode.com/problems/add-strings/description/
 
  Example 1:
  Input: num1 = "9", num2 = "15"

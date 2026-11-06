@@ -1,4 +1,10 @@
 /*
+ * Maximum Prefix Sum for a Given Range | Easy
+ * Idea: for each query, scan the range keeping a running sum and track its maximum.
+ * Time: O(q * n), q = queries, n = |arr| | Space: O(1) besides the output
+ */
+
+/*
  * 43. Maximum Prefix Sum for a Given Range | EASY
  * You are given an array arr of integers and a list of queries. Each query
  * consists of two indices, leftIndex and rightIndex, defining a range in the

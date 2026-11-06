@@ -1,9 +1,12 @@
+/*
+ * Search Insert Position | Easy | LeetCode 35
+ * https://leetcode.com/problems/search-insert-position/
+ * Idea: binary search, remembering the leftmost index whose value is > target as the insertion point.
+ * Time: O(log n) | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://leetcode.com/problems/search-insert-position/
-*/
 
 int searchInsert(vector<int>& nums, int target) {
     int start = 0, end = nums.size() - 1;

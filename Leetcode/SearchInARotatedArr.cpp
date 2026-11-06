@@ -1,9 +1,12 @@
+/*
+ * Search in Rotated Sorted Array | Medium | LeetCode 33
+ * https://leetcode.com/problems/search-in-rotated-sorted-array/
+ * Idea: binary search where one half is always sorted (checked against nums[0]); keep the half whose range can hold the target.
+ * Time: O(log n) | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://leetcode.com/problems/search-in-rotated-sorted-array/description/
-*/
 
 // Time Complexity: O(log n)
 int search(vector<int>& nums, int target) {

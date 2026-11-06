@@ -1,7 +1,12 @@
+/*
+ * Capacity to Ship Packages Within D Days | Medium | LeetCode 1011
+ * https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+ * Idea: binary search on the ship capacity (max weight .. total), greedily counting days needed.
+ * Time: O(n log S), S = total weight | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-//  Problem Link: https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
 
 int shipWithinDays(vector<int>& weights, int days) {
     int n = weights.size(), ans = -1;

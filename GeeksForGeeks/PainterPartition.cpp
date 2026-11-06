@@ -1,7 +1,12 @@
+/*
+ * The Painter's Partition Problem | GeeksForGeeks
+ * https://www.geeksforgeeks.org/problems/the-painters-partition-problem1535/1
+ * Idea: binary search on the longest stretch one painter paints (max board .. total), greedily counting painters needed.
+ * Time: O(n log S), S = total board length | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-// Problem Link: https://www.geeksforgeeks.org/problems/the-painters-partition-problem1535/1
 
 int minTime(vector<int>&arr, int k) {
     int n = arr.size(), ans = -1;

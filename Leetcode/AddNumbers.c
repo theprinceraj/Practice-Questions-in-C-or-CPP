@@ -1,3 +1,9 @@
+/*
+ * Add Numbers
+ * Idea: repeatedly replace the number by the sum of its digits until one digit remains.
+ * Time: O(log n), n = input value | Space: O(1)
+ */
+
 #include <stdio.h>
 int addNumbers(int num) {
   int sum = 0, rem = 0;

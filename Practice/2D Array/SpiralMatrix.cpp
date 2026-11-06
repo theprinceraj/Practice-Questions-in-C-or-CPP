@@ -1,4 +1,10 @@
 /*
+ * Spiral Matrix | Medium
+ * Idea: shrink four boundaries (top, bottom, left, right) layer by layer, guarding the leftover single row or column.
+ * Time: O(m * n) | Space: O(1) besides the output
+ */
+
+/*
  * 49. Spiral Matrix | MEDIUM
  * Given an m × n matrix, return all elements of the matrix in spiral order
  * (clockwise, starting from the top-left element).

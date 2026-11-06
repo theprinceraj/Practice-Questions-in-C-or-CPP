@@ -1,7 +1,12 @@
+/*
+ * Koko Eating Bananas | Medium | LeetCode 875
+ * https://leetcode.com/problems/koko-eating-bananas/
+ * Idea: binary search on the eating speed (1 .. max pile), hours needed = sum of ceil(pile / speed).
+ * Time: O(n log m), m = max pile | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-// Problem Link: https://leetcode.com/problems/koko-eating-bananas/description/
 
 int minEatingSpeed(vector<int>& piles, int h) {
     int n = piles.size(), ans = -1;

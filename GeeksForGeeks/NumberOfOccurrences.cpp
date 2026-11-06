@@ -1,9 +1,12 @@
+/*
+ * Number of Occurrences | GeeksForGeeks
+ * https://www.geeksforgeeks.org/problems/number-of-occurrence2259/1
+ * Idea: two binary searches on the sorted array, one biased left (first) and one right (last); count = last - first + 1.
+ * Time: O(log n) | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://www.geeksforgeeks.org/problems/number-of-occurrence2259/1
-*/
 
 int countFreq(vector<int>& arr, int target) {
     int first_occ = -1;

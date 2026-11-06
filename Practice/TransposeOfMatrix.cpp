@@ -1,4 +1,10 @@
 /*
+ * Transpose of Matrix | Easy
+ * Idea: copy mat[i][j] into result[j][i] in a new matrix (the in-place swap version is commented out).
+ * Time: O(m * n) | Space: O(m * n) for the new matrix
+ */
+
+/*
  * 48. Transpose of Matrix | EASY | Solved
  * Given a square matrix of size n x n, find its transpose. The transpose of a
  * matrix is obtained by converting all rows into columns and all columns into

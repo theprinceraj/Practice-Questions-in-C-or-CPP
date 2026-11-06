@@ -1,4 +1,10 @@
 /*
+ * Rotate a Matrix by 180 Degrees | Medium
+ * Idea: a 180 degree turn is a top-bottom flip of every column plus a left-right flip of every row, done in place.
+ * Time: O(m * n) | Space: O(1)
+ */
+
+/*
  * 55. Rotate a Matrix by 180 Counterclockwise | MEDIUM
  * Given a 2D square matrix mat[][]of size n x n, rotate it by 180 degrees
  * without using extra space. You must rotate the matrix in-place and modify the

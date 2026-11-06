@@ -1,4 +1,10 @@
 /*
+ * Search in a Matrix | Medium
+ * Idea: the matrix is unsorted, so scan every cell linearly.
+ * Time: O(m * n) | Space: O(1)
+ */
+
+/*
  *
  * 313. Search in a Matrix | MEDIUM
  * You are given an m x n integer matrix and a target. Return true if the target

@@ -1,9 +1,12 @@
+/*
+ * Peak Index in a Mountain Array | Medium | LeetCode 852
+ * https://leetcode.com/problems/peak-index-in-a-mountain-array/
+ * Idea: the first i with arr[i - 1] > arr[i] marks the end of the climb, so the peak is i - 1 (a binary search on the slope is also present).
+ * Time: O(n) brute force (run from main), O(log n) binary search | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
-*/
 
 // Time Complexity: O(n)
 int peakIndexInMountainArrayBruteForce(vector<int>& arr) {

@@ -1,7 +1,12 @@
+/*
+ * Allocate Minimum Pages | GeeksForGeeks
+ * https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1
+ * Idea: binary search on the max pages one student reads (max book .. total), greedily counting students needed.
+ * Time: O(n log S), S = total pages | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-// Problem Link: https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1
 
 // TIme Complexity: n * log n
 int findPages(vector<int> &arr, int k) {

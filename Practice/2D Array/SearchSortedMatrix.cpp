@@ -1,4 +1,10 @@
 /*
+ * Search a Sorted Matrix | Medium
+ * Idea: staircase search from the top-right corner; move left if the value is too big, down if too small.
+ * Time: O(m + n) live code, O(log(m * n)) in the commented flat binary search | Space: O(1)
+ */
+
+/*
  * 58. Search a Sorted Matrix | MEDIUM
  * You are given an m x n integer matrix with the following two properties:
  * Each row is sorted in non-decreasing order.

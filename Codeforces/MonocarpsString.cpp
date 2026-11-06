@@ -1,9 +1,14 @@
+/*
+ * Monocarp's String | Codeforces 2145C
+ * https://codeforces.com/contest/2145/problem/C
+ * Idea: score a = +1 and b = -1, then test windows whose length is |total score| (work in progress).
+ * Time: O(n * |total score|), up to O(n^2) per test | Space: O(1)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 
 /*
- * Problem Link: https://codeforces.com/contest/2145/problem/C
-
 TEST CASE:
 7
 13

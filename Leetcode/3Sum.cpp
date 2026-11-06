@@ -1,9 +1,12 @@
+/*
+ * 3Sum | Medium | LeetCode 15
+ * https://leetcode.com/problems/3sum/
+ * Idea: sort (hand-written selection sort), fix i, sweep j and k inward, skipping duplicate i and j values.
+ * Time: O(n^2) | Space: O(1) besides the output
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://leetcode.com/problems/3sum/description/
-*/
 
 void selectionSort(vector<int>& arr) {
     for(int i = 0; i < arr.size(); i++) {

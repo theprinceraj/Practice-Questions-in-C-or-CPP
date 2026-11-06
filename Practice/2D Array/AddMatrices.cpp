@@ -1,3 +1,9 @@
+/*
+ * Add Two Matrices | Easy
+ * Idea: matrices add only if the shapes match (else return {{-1}}); sum cell by cell.
+ * Time: O(m * n) | Space: O(1) besides the result matrix
+ */
+
 
 /*
  * 314. Add Two Matrix | EASY | Solved

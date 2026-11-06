@@ -1,3 +1,9 @@
+/*
+ * Temperature Range
+ * Idea: swimming is fine when 70 < temp < 90 (both bounds exclusive).
+ * Time: O(1) | Space: O(1)
+ */
+
 #include <stdio.h>
 int main() {
   int temp;

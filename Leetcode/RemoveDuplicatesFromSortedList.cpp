@@ -1,3 +1,10 @@
+/*
+ * Remove Duplicates from Sorted List | Easy | LeetCode 83
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+ * Idea: unfinished, it only reads input and starts building the linked list; deduplication is not written.
+ * Time: O(n) | Space: O(n) (list construction only)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 

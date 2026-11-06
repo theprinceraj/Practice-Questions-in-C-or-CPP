@@ -1,9 +1,12 @@
+/*
+ * Seating in Bus | Codeforces 2000B
+ * https://codeforces.com/problemset/problem/2000/B
+ * Idea: keep occupied seats in a hash map; every seat after the first needs an occupied neighbour (seat - 1 or seat + 1).
+ * Time: O(n) per test (average) | Space: O(n)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://codeforces.com/problemset/problem/2000/B
-*/
 
 void seatingInBus(int n, vector<int> seats) {
     unordered_map<int, bool> occupied;

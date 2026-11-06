@@ -1,9 +1,12 @@
+/*
+ * Candies for Nephew | Codeforces 2145A
+ * https://codeforces.com/contest/2145/problem/A
+ * Idea: bump n by 1 until it is divisible by 3 and count the bumps (at most 2).
+ * Time: O(1) per test | Space: O(1)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://codeforces.com/contest/2145/problem/A
-*/
 
 void candiesForNephew(int n) {
     int k = 0;

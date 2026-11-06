@@ -1,4 +1,10 @@
 /*
+ * String Rotated by 2 Places | Easy
+ * Idea: Solution1 builds the +2 and -2 rotations and compares; Solution2 compares by index mapping (i + 2) % n and (i - 2) % n.
+ * Time: O(n) | Space: O(n) Solution1, O(1) Solution2
+ */
+
+/*
  * 301. String Rotated by 2 Places | EASY
  Given two strings, word1 and word2. Return true if the string word2 can be
  obtained by rotating (in any direction) string word1 by exactly 2 places,

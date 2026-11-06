@@ -1,9 +1,15 @@
 /*
+ * Valid Palindrome | Easy | LeetCode 125
+ * https://leetcode.com/problems/valid-palindrome/
+ * Idea: two pointers skip non-alphanumeric characters and compare the lowercased ends.
+ * Time: O(n) | Space: O(1)
+ */
+
+/*
  *125. Valid Palindrome | Easy
  A phrase is a palindrome if, after converting all uppercase letters into
  lowercase letters and removing all non-alphanumeric characters, it reads the
  same forward and backward. Alphanumeric characters include letters and numbers.
- Link: https://leetcode.com/problems/valid-palindrome/description/
  */
 
 #include <string>

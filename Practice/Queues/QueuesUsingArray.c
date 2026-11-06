@@ -1,3 +1,9 @@
+/*
+ * Circular Queue Using Array
+ * Idea: circular buffer with front/rear indices taken modulo size; one slot stays empty to tell full from empty.
+ * Time: O(1) per enqueue/dequeue | Space: O(n) for the array
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 struct Queue {

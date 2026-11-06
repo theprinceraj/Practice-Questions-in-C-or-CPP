@@ -1,3 +1,9 @@
+/*
+ * Pattern 7 (Advanced set): Butterfly
+ * Idea: growing star wings with a shrinking gap for n rows, then n - 1 rows going back down.
+ * Time: O(n^2) | Space: O(1)
+ */
+
 #include <stdio.h>
 int main() {
 

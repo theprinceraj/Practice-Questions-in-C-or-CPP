@@ -1,3 +1,9 @@
+/*
+ * Equilibrium Index
+ * Idea: with prefix sums, index k balances when the sum before k equals the total minus the prefix through k.
+ * Time: O(n) | Space: O(n)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 

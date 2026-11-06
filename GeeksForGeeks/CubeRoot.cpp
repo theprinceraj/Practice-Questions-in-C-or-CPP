@@ -1,9 +1,12 @@
+/*
+ * Cube Root | GeeksForGeeks
+ * https://www.geeksforgeeks.org/problems/cube-root-of-a-number0915/1
+ * Idea: binary search the largest integer whose cube is <= n, using long long to avoid overflow.
+ * Time: O(log n) | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://www.geeksforgeeks.org/problems/cube-root-of-a-number0915/1
-*/
 
 int cubeRoot(int n) {
     int start = 0, end = n - 1, cube_root = -1;

@@ -1,3 +1,9 @@
+/*
+ * Even Positive Number
+ * Idea: a number qualifies when num % 2 == 0 and num > 0.
+ * Time: O(1) | Space: O(1)
+ */
+
 #include <stdio.h>
 int main() {
 

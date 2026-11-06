@@ -1,9 +1,12 @@
+/*
+ * Square Year | Codeforces 2114A
+ * https://codeforces.com/contest/2114/problem/A
+ * Idea: the year must be a perfect square; binary search its root r and print a = r / 2, b = r - a.
+ * Time: O(log y) per test, y = year value | Space: O(1)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://codeforces.com/contest/2114/problem/A
-*/
 
 int findSqrt(int num) {
     if(num == 1) return 1;

@@ -1,12 +1,12 @@
+/*
+ * Water Bottles II | Medium | LeetCode 3100
+ * https://leetcode.com/problems/water-bottles-ii/
+ * Idea: simulate; each exchange costs numExchange empties, returns one bottle, and raises the cost by 1.
+ * Time: O(sqrt(numBottles)) | Space: O(1)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
-
-/*
- *
- *  Problem Link:
- *  https://leetcode.com/problems/water-bottles-ii/?envType=daily-question&envId=2025-10-02
- *
-*/
 
 int maxBottlesDrunk(int numBottles, int numExchange) {
     int drunk = numBottles;

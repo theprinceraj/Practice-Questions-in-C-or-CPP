@@ -1,3 +1,9 @@
+/*
+ * Pattern 6 (Advanced set): Inverted Butterfly
+ * Idea: top half has shrinking star wings around a widening gap, the bottom half mirrors it growing back.
+ * Time: O(n^2) | Space: O(1)
+ */
+
 #include <stdio.h>
 int main() {
 

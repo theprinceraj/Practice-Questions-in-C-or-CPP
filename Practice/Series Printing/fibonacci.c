@@ -1,3 +1,9 @@
+/*
+ * Fibonacci Series
+ * Idea: iteratively build each term from the previous two.
+ * Time: O(n) | Space: O(1)
+ */
+
 #include <stdio.h>
 
 void printFibonacci(int n);

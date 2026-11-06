@@ -1,9 +1,12 @@
+/*
+ * Minimum Number of Days to Make m Bouquets | Medium | LeetCode 1482
+ * https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/
+ * Idea: binary search on the day; for each day count bouquets of k adjacent bloomed flowers in one scan.
+ * Time: O(n log D), D = max bloomDay | Space: O(1)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/
-*/
 
 int numOfBouquets(int day, int k, vector<int>& bloomDay) {
     int num = 0, count = 0;

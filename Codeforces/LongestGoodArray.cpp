@@ -1,9 +1,12 @@
+/*
+ * Longest Good Array | Codeforces 2008C
+ * https://codeforces.com/problemset/problem/2008/C
+ * Idea: greedily add elements whose gaps grow 1, 2, 3, ... while the value stays <= r; count them.
+ * Time: O(sqrt(r - l)) per test | Space: O(1)
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://codeforces.com/problemset/problem/2008/C
-*/
 
 void longestGoodArray(int l, int r) {
     int n = 0, diff = 0;

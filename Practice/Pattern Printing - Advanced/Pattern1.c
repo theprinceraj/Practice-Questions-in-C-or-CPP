@@ -1,3 +1,9 @@
+/*
+ * Pattern 1 (Advanced set): Star Pyramid
+ * Idea: each row prints n - row blank pairs, then row + (row - 1) stars.
+ * Time: O(n^2) | Space: O(1)
+ */
+
 #include <stdio.h>
 
 int main() {

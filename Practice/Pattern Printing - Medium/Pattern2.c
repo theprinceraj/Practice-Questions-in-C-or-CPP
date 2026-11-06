@@ -1,3 +1,9 @@
+/*
+ * Pattern 2 (Medium set): Right-aligned Alphabet Triangle
+ * Idea: fixed 5 rows, each with 5 - row spaces then the letters A up to the row's letter (the n read is unused).
+ * Time: O(1) fixed size | Space: O(1)
+ */
+
 #include <stdio.h>
 int main() {
   int n;

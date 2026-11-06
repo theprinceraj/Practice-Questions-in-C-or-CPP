@@ -1,3 +1,9 @@
+/*
+ * Pattern 8 (Advanced set): Star Diamond
+ * Idea: a star pyramid for n rows followed by an inverted one; the widest row is printed twice.
+ * Time: O(n^2) | Space: O(1)
+ */
+
 #include <stdio.h>
 int main() {
 

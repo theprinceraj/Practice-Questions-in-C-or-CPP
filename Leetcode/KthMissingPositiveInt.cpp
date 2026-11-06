@@ -1,9 +1,12 @@
+/*
+ * Kth Missing Positive Number | Easy | LeetCode 1539
+ * https://leetcode.com/problems/kth-missing-positive-number/
+ * Idea: arr[i] - i - 1 counts the missing numbers before arr[i]; binary search the first index where it reaches k, answer = index + k.
+ * Time: O(log n) optimised (run from main), O(n + k) brute force | Space: O(1)
+ */
+
 #include<bits/stdc++.h>
 using namespace std;
-
-/*
- * Problem Link: https://leetcode.com/problems/kth-missing-positive-number/description/
-*/
 
 // Time Complexity: O(n)
 int findKthPositiveBruteForce(vector<int>& arr, int k) {

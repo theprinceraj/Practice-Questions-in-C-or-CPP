@@ -1,4 +1,10 @@
 /*
+ * First Unique Character in a String | Easy
+ * Idea: count letter frequencies in a 26-slot array, then return the first index whose count is 1.
+ * Time: O(n) | Space: O(1)
+ */
+
+/*
  * 226. First Unique Character in a String
  EASY
  Given a string s, find the first non-repeating character in it and return its
