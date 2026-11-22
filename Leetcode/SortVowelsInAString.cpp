@@ -14,6 +14,7 @@
  LINK: https://leetcode.com/problems/sort-vowels-in-a-string/
  */
 
+ #include <algorithm>
 #include <string>
 #include <vector>
 using namespace std;
